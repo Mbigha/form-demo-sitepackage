@@ -1,0 +1,44 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: demoform
+label: 'Demo form'
+prototypeName: standard
+finishers:
+  -
+    identifier: SaveUserDataFinisher
+  -
+    options:
+      message: 'User created successfully'
+      contentElementUid: ''
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: Step
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: first-name
+        label: 'First name'
+      -
+        defaultValue: ''
+        type: Text
+        identifier: last-name
+        label: 'Last name'
+      -
+        properties:
+          saveToFileMount: '1:/user_upload/'
+          allowedMimeTypes:
+            - image/jpeg
+            - image/png
+            - image/bmp
+        type: MultipleUpload
+        identifier: user-pictures
+        label: 'User pictures'

@@ -1,0 +1,29 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          120: EXT:demo_sitepackage/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  20: 'EXT:demo_sitepackage/Resources/Private/Templates/Form/Frontend/'
+                partialRootPaths:
+                  20: 'EXT:demo_sitepackage/Resources/Private/Partials/Form/Frontend/'
+                layoutRootPaths:
+                  20: 'EXT:demo_sitepackage/Resources/Private/Layouts/Form/Frontend/'
+            MultipleUpload:
+              __inheritances:
+                10: 'TYPO3.CMS.Form.prototypes.standard.formElementsDefinition.ImageUpload'
+              implementationClassName: 'Mbigha\DemoSitepackage\Domain\Model\FormElements\MultipleUpload'
+              formEditor:
+                label: 'Multiple Image upload'
+              renderingOptions:
+                templateName: 'MultipleUpload'
+          finishersDefinition:
+            SaveUserDataFinisher: # Custom finisher definition
+              implementationClassName: 'Mbigha\DemoSitepackage\Domain\Finishers\SaveUserDataFinisher'

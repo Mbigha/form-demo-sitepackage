@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-07-14UTC07:54:120">
+        <header>
+            <authorName>Sigala Mbigha</authorName>
+            <authorEmail>sigalambigha@gmail.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="tx_demositepackage_domain_model_user" resname="tx_demositepackage_domain_model_user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_demositepackage_domain_model_user.first_name" resname="tx_demositepackage_domain_model_user.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_demositepackage_domain_model_user.last_name" resname="tx_demositepackage_domain_model_user.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
